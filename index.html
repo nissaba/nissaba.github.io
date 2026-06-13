@@ -113,6 +113,20 @@
       margin-bottom: 1rem;
     }
 
+    .app-card > p:last-child {
+      margin-bottom: 0;
+    }
+
+    .app-card .card-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #6b9bd1;
+      margin-bottom: 0.5rem;
+    }
+
     .app-links {
       list-style: none;
       display: flex;
@@ -188,7 +202,7 @@
     </header>
 
     <section>
-      <h2>My Applications</h2>
+      <h2>Apps &amp; Projects</h2>
       <div class="apps-grid">
         <article class="app-card">
           <h3><a href="/eve-structure-timer/">EVE Structure Timer</a></h3>
@@ -207,6 +221,12 @@
             <li><a href="/system-explorer/#privacy">Privacy Policy</a></li>
             <li><a href="/system-explorer/#choices">User Privacy Choices</a></li>
           </ul>
+        </article>
+
+        <article class="app-card">
+          <span class="card-tag">Open Source</span>
+          <h3><a href="https://github.com/nissaba/EazyRestClient" target="_blank" rel="noopener noreferrer">EazyRestClient</a></h3>
+          <p>A lightweight, protocol-oriented Swift framework for REST API communication — Codable requests, customizable headers, query parameters, and async/await support via Swift Package Manager.</p>
         </article>
       </div>
     </section>
