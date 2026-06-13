@@ -5,92 +5,239 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pascale Beaulac – iOS Developer</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(160deg, #0f1419 0%, #1a2332 45%, #243044 100%);
+      color: #e8ecf0;
       line-height: 1.6;
+      min-height: 100vh;
     }
-    h1, h2, h3 {
-      color: #333;
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
     }
-    nav a {
-      margin-right: 1rem;
-    }
-    .app-section, .exp-section {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
+
+    .hero {
       text-align: center;
+      padding: 3rem 0 3.5rem;
     }
-    a {
-      color: #007acc;
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff 0%, #a8c7fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: #9aa8b8;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .hero .role {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6b9bd1;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #c5d4e8;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .apps-grid {
+      display: grid;
+      gap: 1.25rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .apps-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+    }
+
+    .app-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+
+    .app-card:hover {
+      border-color: rgba(107, 155, 209, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .app-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .app-card h3 a {
+      color: #ffffff;
       text-decoration: none;
     }
-    a:hover {
+
+    .app-card h3 a:hover {
+      color: #a8c7fa;
+    }
+
+    .app-card > p {
+      font-size: 0.95rem;
+      color: #9aa8b8;
+      margin-bottom: 1rem;
+    }
+
+    .app-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+
+    .app-links a {
+      font-size: 0.85rem;
+      color: #6b9bd1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .app-links a:hover {
+      color: #a8c7fa;
+      text-decoration: underline;
+    }
+
+    .exp-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .exp-card {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 3px solid #6b9bd1;
+      border-radius: 0 10px 10px 0;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .exp-card h3 {
+      font-size: 1.05rem;
+      color: #ffffff;
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-card p {
+      font-size: 0.95rem;
+      color: #9aa8b8;
+    }
+
+    .exp-card strong {
+      color: #c5d4e8;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      font-size: 0.875rem;
+      color: #6b7d8f;
+    }
+
+    footer a {
+      color: #6b9bd1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #a8c7fa;
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Pascale Beaulac</h1>
-  <p><strong>iOS/macOS Developer</strong> passionate about clean architecture, elegant code, and useful tools that make life easier.</p>
+  <div class="container">
+    <header class="hero">
+      <p class="role">iOS / macOS Developer</p>
+      <h1>Pascale Beaulac</h1>
+      <p>Passionate about clean architecture, elegant code, and useful tools that make life easier.</p>
+    </header>
 
-  <h2>My Applications</h2>
+    <section>
+      <h2>My Applications</h2>
+      <div class="apps-grid">
+        <article class="app-card">
+          <h3><a href="/eve-structure-timer/">EVE Structure Timer</a></h3>
+          <p>Track and manage structure reinforcement windows in EVE Online. Built for capsuleers and alliance leaders who need reliable, offline access to vulnerability timers.</p>
+        </article>
 
-  <div class="app-section">
-    <h3><a href="/eve-structure-timer/">EVE Structure Timer</a></h3>
-    <p>Track and manage structure reinforcement windows in EVE Online with ease. Designed for capsuleers and alliance leaders who need reliable, offline access to vulnerability timers.</p>
-    <ul>
-      <li><a href="/eve-structure-timer/#privacy">Privacy Policy</a></li>
-      <li><a href="/eve-structure-timer/#choices">User Privacy Choices</a></li>
-    </ul>
+        <article class="app-card">
+          <h3><a href="/strategies/">Strategies</a></h3>
+          <p>A creative tool inspired by Oblique Strategies — shuffle thought-provoking prompts to break through mental blocks in design, music, writing, and more.</p>
+          <ul class="app-links">
+            <li><a href="/strategies/#privacy">Privacy Policy</a></li>
+            <li><a href="/strategies/#choices">User Privacy Choices</a></li>
+          </ul>
+        </article>
+
+        <article class="app-card">
+          <h3><a href="/system-explorer/">System Explorer</a></h3>
+          <p>Explore solar systems and their resources in EVE Frontier. Browse planets, moons, asteroids, and other system data to plan your next move across the frontier.</p>
+          <ul class="app-links">
+            <li><a href="/system-explorer/#privacy">Privacy Policy</a></li>
+            <li><a href="/system-explorer/#choices">User Privacy Choices</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Past Experience</h2>
+      <div class="exp-list">
+        <article class="exp-card">
+          <h3>Prospect Software</h3>
+          <p>Worked on <strong>MLS-Touch / MLS-Client</strong>, a real estate app developed using <strong>UIKit (Objective-C / Swift)</strong> for iOS. Focused on maintaining legacy code and introducing Swift improvements.</p>
+        </article>
+
+        <article class="exp-card">
+          <h3>Argon 18</h3>
+          <p>Developed the <strong>Notio Cycling App</strong>, a performance-tracking companion app built in <strong>Swift with UIKit</strong>. Also contributed to the <strong>Argon 18 app</strong>, built with <strong>Flutter</strong>, for enhanced user experience with smart cycling gear.</p>
+        </article>
+
+        <article class="exp-card">
+          <h3>Appcom</h3>
+          <p>Worked on various internal projects using <strong>Objective-C and UIKit</strong>. Contributed to stability and UI refinement across multiple app modules.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Pascale Beaulac. All rights reserved. | <a href="mailto:nissaba.dev@gmail.com">nissaba.dev@gmail.com</a></p>
+    </footer>
   </div>
-
-  <div class="app-section">
-    <h3><a href="/strategies/">\Strategies</a></h3>
-    <p>An upcoming personal strategy tool. More details coming soon.</p>
-    <ul>
-      <li><a href="/strategies/#privacy">Privacy Policy</a></li>
-      <li><a href="/strategies/#choices">User Privacy Choices</a></li>
-    </ul>
-  </div>
-
-  <div class="app-section">
-    <h3><a href="/FrontierExplorer/">Frontier Explorer</a></h3>
-    <p>Explore new frontiers and discover amazing destinations. A tool for adventure seekers and explorers.</p>
-    <ul>
-      <li><a href="/FrontierExplorer/#privacy">Privacy Policy</a></li>
-      <li><a href="/FrontierExplorer/#choices">User Privacy Choices</a></li>
-    </ul>
-  </div>
-
-  <h2>Past Experience</h2>
-
-  <div class="exp-section">
-    <h3>Prospect Software</h3>
-    <p>Worked on <strong>MLS-Touch / MLS-Client</strong>, a real estate app developed using <strong>UIKit (Objective-C / Swift)</strong> for iOS. Focused on maintaining legacy code and introducing Swi[...]
-  </div>
-
-  <div class="exp-section">
-    <h3>Argon 18</h3>
-    <p>Developed the <strong>Notio Cycling App</strong>, a performance-tracking companion app built in <strong>Swift with UIKit</strong>. Also contributed to the <strong>Argon 18 app</strong>, built w[...]
-  </div>
-
-  <div class="exp-section">
-    <h3>Appcom</h3>
-    <p>Worked on various internal projects using <strong>Objective-C and UIKit</strong>. Contributed to stability and UI refinement across multiple app modules.</p>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Pascale Beaulac. All rights reserved. | <a href="mailto:nissaba.dev@gmail.com">nissaba@gmail.com</a></p>
-  </footer>
 </body>
 </html>
