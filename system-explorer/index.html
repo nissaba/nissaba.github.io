@@ -39,6 +39,24 @@
       text-decoration: underline;
     }
 
+    .launch-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding: 0.65rem 1.25rem;
+      background: rgba(107, 155, 209, 0.15);
+      border: 1px solid rgba(107, 155, 209, 0.4);
+      border-radius: 8px;
+      color: #a8c7fa;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .launch-link:hover {
+      background: rgba(107, 155, 209, 0.25);
+      text-decoration: none;
+    }
+
     .header {
       text-align: center;
       margin-bottom: 2.5rem;
@@ -142,20 +160,21 @@
 <body>
   <div class="container">
     <a href="/" class="back-link">← Back to main site</a>
+    <a href="/FrontierExplorer/" class="launch-link">Open System Explorer →</a>
 
     <header class="header">
       <p class="badge">EVE Frontier</p>
       <h1>System Explorer</h1>
-      <p>A companion tool for exploring solar systems and their resources across EVE Frontier — planets, moons, asteroids, and more.</p>
+      <p>An unofficial fan tool for EVE Frontier — search systems by name or ID, browse nearby candidates, and read map notes on sites, belts, and Water Ice scouting hints. <a href="/FrontierExplorer/">Launch the app</a>.</p>
     </header>
 
     <div class="section">
       <h2>Key Features</h2>
       <ul>
-        <li>Browse solar systems and view available resources</li>
-        <li>Inspect planets, moons, and asteroid belts at a glance</li>
-        <li>Search and filter systems to plan mining and exploration routes</li>
-        <li>Offline-friendly access to cached system data</li>
+        <li>Search systems by name or ID and jump to neighbors in the detail panel</li>
+        <li>Filter nearby lists by region, radius, combat, and belt prospects</li>
+        <li>Read inner vs outer belt tags, site types, and Water Ice scouting hints</li>
+        <li>Browse all sites in a system sorted by planet and name</li>
       </ul>
     </div>
 
